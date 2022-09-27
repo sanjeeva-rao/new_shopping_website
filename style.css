@@ -1,0 +1,61 @@
+
+
+#name-cost{
+    position: relative;
+    left: 6cm;
+    bottom: 5cm;
+    color: black;
+}
+.mobilename{
+    font-weight: 700;
+}
+#cartimage{
+    position: relative;
+    left: 20cm;
+    bottom: 0.7cm;
+    font-size: 50px;
+    color:white;
+}
+#searchbox{
+    border-style: solid;
+    height: 1cm;
+    width: 10cm;
+    border-radius: 10px;
+    text-align: center;
+    font-size: x-large;
+    position: relative;
+    left: 10cm;
+    bottom: 1cm;
+}
+#home{
+    position: relative;
+    left:1cm;
+    top: 1cm;
+    color: white;
+}
+#top{
+   
+    background-color:#3333cc;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.middle{
+    background-color:white;
+}
+
+.cart-button{
+    background-color: #3333cc;
+    color: white;
+    border-style: none;
+    height: 1cm;
+    width: 5cm;
+    border-radius: 10px;
+    
+}
+#cartlength{
+    position: relative;
+    left: 19.1cm;
+    bottom: 2cm;
+    color: white;
+}

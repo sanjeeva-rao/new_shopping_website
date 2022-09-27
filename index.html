@@ -1,0 +1,66 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/901709e834.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl" >
+
+    <diV ng-init="cond1=false;cond2=false" >
+        <div id="top">
+            <h1 id="home" ng-click="cond1=true;cond2=false">Home</h1>
+            <input type="search" placeholder="Search..." id="searchbox" ng-model="searchInput" >
+            
+            <i class="fa-solid fa-cart-shopping" id="cartimage"  ng-click="cond1=false;cond2=true"></i>
+            <span id="cartlength">{{length}}</span>
+            
+        </div>
+        
+        <div ng-repeat="x in data|filter:searchInput" class="middle" ng-show="cond1">
+            <img id="urlimg" src="{{x.url}}">
+                <div id="name-cost">
+                        <p class="mobilename">{{x.name}}</p>
+                        <p>Rs{{x.cost}}</p>
+                        <button ng-hide="x.status" ng-click="addtocart($index)" class="cart-button" >Add to Cart</button>
+                    
+                        <br>
+                        <button ng-show="x.status" ng-click="removefromcart($index)" class="cart-button">Remove from Cart</button>
+
+                </div>
+                
+                
+            </div>
+        </div>
+
+
+        <div  class="middle" ng-show="cond2" ng-repeat="x in array|filter:searchInput">
+            <img src="{{x.url}}">
+            <div id="name-cost">
+                <p class="mobilename">{{x.name}}</p>
+                <p>Rs{{x.cost}}</p>
+                        
+                        <button ng-click="removefromcart(x.id)" class="cart-button">Remove from Cart</button>
+            </div>
+        </div>
+    </diV>
+     
+    
+    
+</diV>
+
+    
+    <script src="myapp.js"></script>
+    <script src="mycontroller.js"></script>
+    
+</body>
+</html>
