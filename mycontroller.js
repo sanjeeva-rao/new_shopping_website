@@ -5,15 +5,21 @@ app.controller("myCtrl",function($scope,$http){
        $scope.data=responce.data.mobiles;
 
     })
-    $scope.addtocart=function(index){
-        console.log($scope.data[index].status);
-        $scope.data[index].status=true;
-        console.log($scope.data[index].status);
-        console.log("addtocartclicked")
-        $scope.array.push($scope.data[index]);
-        $scope.length=$scope.array.length;
-        console.log($scope.array);
+    $scope.addtocart=function(id){
+        console.log("hi")
+        $scope.data.forEach(function(element){
+            console.log("helo")
+            
 
+            if(element.id==id){
+                
+                $scope.array.push(element);
+                $scope.data[id].status=true;
+                $scope.length=$scope.array.length;
+            }
+        })
+
+    
             
     }
     $scope.removefromcart=function(x){

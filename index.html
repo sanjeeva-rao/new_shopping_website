@@ -31,7 +31,7 @@
                 <div id="name-cost">
                         <p class="mobilename">{{x.name}}</p>
                         <p>Rs{{x.cost}}</p>
-                        <button ng-hide="x.status" ng-click="addtocart($index)" class="cart-button" >Add to Cart</button>
+                        <button ng-hide="x.status" ng-click="addtocart(x.id)" class="cart-button" >Add to Cart</button>
                     
                         <br>
                         <button ng-show="x.status" ng-click="removefromcart($index)" class="cart-button">Remove from Cart</button>
